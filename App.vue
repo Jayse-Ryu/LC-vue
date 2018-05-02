@@ -490,7 +490,7 @@ export default {
 
   ::selection {
     color: white;
-    background: rgba(255,255,0,0.7);
+    background: rgba(255,255,0,0.3);
   }
 
   /*
