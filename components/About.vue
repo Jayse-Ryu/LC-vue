@@ -118,6 +118,29 @@
         </div>
       </section>
 
+      <section class="section_3">
+        <div class="section_3_boxes">
+          <div class="meet_box_1">
+            <h3>엘씨 사람들</h3>
+            <h4>팀을 만나보세요.</h4>
+            <p>기획, 디자이너, 개발자 등 각 분야에서</p>
+            <p>탁월한 엘씨벤처스의 팀을 소개합니다.</p>
+            <div class="router_wrap">
+              <router-link class="router" to="/people">더 알아보기 &#62</router-link>
+            </div>
+          </div>
+          <div class="meet_box_2">
+            <h3>엘씨벤처스 사무실</h3>
+            <h4>사무실을 소개합니다.</h4>
+            <p>멋진 카페들이 많은 서울숲에 있는 엘씨벤처스는</p>
+            <p>자유롭고 크리에이티브한 공간입니다.</p>
+            <div class="router_wrap">
+              <router-link class="router" to="/contact">더 알아보기 &#62</router-link>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </div>
   </div>
 </template>
@@ -147,6 +170,7 @@
     background-position: 50% 50%;
   }
 
+  /* section 0 start */
   .section_0 {
     position: relative;
     top: 0;
@@ -188,7 +212,9 @@
       white-space: pre-line;
     }
   }/*=*/
+  /* section 0 end */
 
+  /* section 1 start */
   .section_1 {
     width: 100%;
     padding: 50px 20px;
@@ -196,7 +222,9 @@
     text-align: center;
     color: #515151;
   }
+  /* section 1 end */
 
+  /* section 2 start */
   .section_2 {
     .section_2_title {
       color: yellow;
@@ -238,6 +266,54 @@
         }
       }
     }
+  }
+  /* section 2 end */
 
+  .section_3 {
+    padding: 0;
+    .section_3_boxes {
+      position: relative;
+      text-align: center;
+      .meet_box_1 {
+        width: 50%;
+        vertical-align: top;
+        float: left;
+        padding: 40px 20px;
+        background-color: #1c3448;
+        color: #efefef;
+      }
+      .meet_box_2 {
+        width: 50%;
+        vertical-align: top;
+        float: left;
+        padding: 40px 20px;
+        background-color: #2a4e6c;
+        color: #efefef;
+      }
+      &:after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+      h3 {
+        margin: 0;
+        font-size: 15px;
+      }
+      h4 {
+        font-size: 25px;
+        margin: 0;
+        padding: 20px 0;
+      }
+      .router_wrap {
+        padding: 20px 0;
+        font-size: 14px;
+      }
+      .router {
+        color: yellow;
+        &:hover {
+          color: #efefef;
+        }
+      }
+    }
   }
 </style>
