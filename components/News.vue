@@ -2,7 +2,16 @@
   <div class="main_role" id="main_role"
        :style="this.$parent.$data.mix_data.slide_mover"
        @click="$parent.$options.methods.only_close">
-    <input type="text" placeholder="news">
+
+    <section class="section_0">
+      <h2>엘씨벤처스의 도약은 현재진행형 입니다.</h2>
+    </section>
+
+    <section class="section_1">
+
+    </section>
+
+
   </div>
 </template>
 
@@ -13,5 +22,21 @@
 </script>
 
 <style lang="scss" scoped>
-
+  .section_0 {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 450;
+    width: 100%;
+    height: 100vh;
+    padding-top: calc(50vh - 25px);
+    color: #fff68f;
+    text-align: center;
+    font-size: 50px;
+    font-weight: lighter;
+    word-break: keep-all;
+    white-space: pre-line;
+    background-color: rgba(0,0,0,0.5);
+    box-shadow: inset 0px -200px 20px -190px rgba(0,0,0,0.75);
+  }
 </style>

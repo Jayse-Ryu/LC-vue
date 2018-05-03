@@ -108,8 +108,8 @@
   }/* Divide bar */
 
   .menu_close {
-    position: fixed;
-    top: 30px;
+    position: relative;
+    top: 5px;
     right: 1px;
     width: 30px;
     height: 30px;
