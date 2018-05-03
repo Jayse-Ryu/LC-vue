@@ -32,7 +32,7 @@
     padding-top: calc(50vh - 25px);
     color: #fff68f;
     text-align: center;
-    font-size: 50px;
+    font-size: 20px;
     font-weight: lighter;
     word-break: keep-all;
     white-space: pre-line;
