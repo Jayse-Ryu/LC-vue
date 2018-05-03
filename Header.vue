@@ -1,8 +1,9 @@
 <template>
   <!-- Header + Top Buttons -->
-  <header class="header" :style="this.$parent.$data.mix_data.slide_mover" id="header">
+  <header class="header"
+          :style="this.$parent.$data.mix_data.slide_mover" id="header">
 
-    <!-- Logo -->
+    <!-- Logo Area -->
     <div class="head_logo">
       <router-link class="head_logo_inner" to="/">LC</router-link>
     </div>
@@ -12,15 +13,14 @@
 
     <!-- Top Buttons (Simple nav button) -->
     <div class="middle_menu">
-      <div class="button_middle">
+      <div class="button_middle" @click="$parent.$options.methods.navi_delay">
         <router-link class="button_middle_inner" to="/projects">프로젝트 &#62</router-link>
-        <!--<a class="button_middle_inner" id="nav_mid_2" href="html/page_2.html">프로젝트 &#62</a>-->
       </div>
       <div class="button_middle">
         <router-link class="button_middle_inner" to="/recruit">채용정보 &#62</router-link>
-        <!--<a class="button_middle_inner" id="nav_mid_7" href="html/page_7.html">채용정보 &#62</a>-->
       </div>
     </div>
+    <!--Top button - middle menu-->
 
   </header>
 </template>
@@ -38,19 +38,11 @@
     top: 0;
     left: 0;
     width: 100%;
+    height: 1px;
     padding: 25px;
     margin-bottom: -50px;
-    transition: all 350ms cubic-bezier(.83,.01,.46,.86)
-  }
-
-  .header_slide {
-    position: absolute;
-    top: 0;
-    left: -250px;
-    width: 100%;
-    padding: 25px;
-    margin-bottom: -50px;
-    transition: all 350ms cubic-bezier(.83,.01,.46,.86)
+    transition: all 350ms cubic-bezier(.83,.01,.46,.86);
+    overflow: visible;
   }
 
   .head_logo {
@@ -62,8 +54,8 @@
     line-height: 150px;
     text-align: center;
     font-size: 50px;
-    color: yellow;
-    border: 3px solid yellow;
+    color: #fff68f;
+    border: 3px solid #fff68f;
     z-index: 5000;
     transition: all 350ms cubic-bezier(.83,.01,.46,.86);
     &:hover {
@@ -76,7 +68,7 @@
     display: block;
     width: 100%;
     height: 100%;
-    color: yellow;
+    color: #fff68f;
   }
 
   /* Center buttons */
@@ -86,13 +78,13 @@
     height: 50px;
     line-height: 53px;
     float: right;
-    color: yellow;
+    color: #fff68f;
     z-index: 5000;
     right: 75px;
   }
 
   .button_middle_inner {
-    color: yellow;
+    color: #fff68f;
     transition: all 350ms cubic-bezier(.83,.01,.46,.86);
     &:hover {
        color: white;
@@ -106,10 +98,9 @@
     content: '\2630';
     font-size: 35px;
     line-height: 53px;
-    color: yellow;
+    color: #fff68f;
     transition: all 350ms cubic-bezier(.83,.01,.46,.86);
   }
-
   .button_menu {
     position: fixed;
     width: 50px;
@@ -128,7 +119,7 @@
   header:after {
     content: '';
     display: block;
-    both: clear;
+    clear: both;
   }
   /* Header End and Clear float */
 
@@ -148,8 +139,8 @@ Media query
       line-height: 50px;
       text-align: center;
       font-size: 20px;
-      color: yellow;
-      border: 2px solid yellow;
+      color: #fff68f;
+      border: 2px solid #fff68f;
       &:hover {
         border: 2px solid white;
         background-color: rgba(25, 25, 25, 0.6);
@@ -162,7 +153,7 @@ Media query
       line-height: 53px;
       right: 40px;
       float: right;
-      color: yellow;
+      color: #fff68f;
     }
   }/*=*/
 
@@ -176,20 +167,14 @@ Media query
       line-height: 50px;
       text-align: center;
       font-size: 20px;
-      color: yellow;
-      border: 2px solid yellow;
+      color: #fff68f;
+      border: 2px solid #fff68f;
       &:hover {
         border: 2px solid white;
         background-color: rgba(25, 25, 25, 0.6);
       }
     }
     .button_middle {
-      //width: 75px;
-      //height: 50px;
-      //line-height: 53px;
-      //right: 40px;
-      //float: right;
-      //color: yellow;
       visibility: hidden;
     }
   }/*=*/

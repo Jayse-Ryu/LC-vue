@@ -1,8 +1,12 @@
 <template>
   <div id="app">
+    <!--Header-->
     <app-header/>
+    <!--Main Contents-->
     <router-view/>
+    <!--Footer-->
     <app-footer/>
+    <!--Right side Navigation-->
     <app-navigator/>
   </div>
 </template>
@@ -13,7 +17,7 @@ export default {
   name: 'App',
   data() {
     return{
-      /*Link to scss values*/
+      /*Link to plugIn js for scss values*/
       mix_data: MixIn.data
     }
   }/*data*/,
@@ -21,12 +25,12 @@ export default {
     /*Navigation On Off*/
     slide_nav() {
       MixIn.methods.make_move();
-    },/*slide_nav*/
-    /*Navigation Only close*/
+    },
+    /*Navigation Only close for click close or main role*/
     only_close() {
       MixIn.methods.make_close();
     },
-    /*Navigation Close a bit later*/
+    /*Navigation Close a bit later when hit route location*/
     navi_delay() {
       MixIn.methods.make_slow();
     }
@@ -465,9 +469,9 @@ export default {
 
 
   /*
-  ===============================================
+  =========================================================================
   Add more personal normalize.
-  ===============================================
+  =========================================================================
   */
 
   * {
@@ -481,6 +485,8 @@ export default {
   p {
     padding: 0;
     margin: 0;
+    word-wrap: normal;
+    word-break: keep-all;
   }
 
   ul, li {
@@ -490,8 +496,8 @@ export default {
   }
 
   ::selection {
-    color: white;
-    background: rgba(255,255,0,0.3);
+    color: #313131;
+    background: rgba(245, 236, 133, 0.9);
   }
 
   /*
@@ -509,16 +515,16 @@ export default {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
-  }
+  } /*body normalize more*/
 
   .main_role {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
     min-height: 100vh;
     transition: all 350ms cubic-bezier(.83,.01,.46,.86);
-  }
+  } /*Overall Main Contents Area*/
 
 
 </style>

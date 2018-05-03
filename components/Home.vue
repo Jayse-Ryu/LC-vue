@@ -122,7 +122,7 @@
     width: 100%;
     height: 100vh;
     padding-top: calc(50vh - 25px);
-    color: yellow;
+    color: #fff68f;
     text-align: center;
     font-size: 50px;
     font-weight: lighter;
@@ -141,7 +141,7 @@
       width: 100%;
       height: 100vh;
       padding-top: calc(50vh - 25px);
-      color: yellow;
+      color: #fff68f;
       text-align: center;
       font-size: 28px;
       word-break: keep-all;

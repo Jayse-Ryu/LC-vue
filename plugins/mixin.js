@@ -6,10 +6,11 @@ var Mixin = {
 
     /*Objects move for slide Navigation.*/
     slide_mover: {
-      left: '0'
+      left: '0',
     },
     navigation_mover: {
-      right: '-250px'
+      //right: '-250px',
+      transform: 'unset'
     }
   }/*data*/,
   methods:{
@@ -19,12 +20,16 @@ var Mixin = {
 
       if(Mixin.data.slide_flag === false){
         anchor.slide_mover.left = '-250px';
-        anchor.navigation_mover.right = '0';
+        //anchor.slide_mover.transform = 'translateX(-250px)';
+        //anchor.navigation_mover.right = '0';
+        anchor.navigation_mover.transform = 'translateX(-250px)';
         anchor.slide_flag = true;
       }
        else if (Mixin.data.slide_flag === true){
         anchor.slide_mover.left = '0';
-        anchor.navigation_mover.right = '-250px';
+        //anchor.slide_mover.transform = 'unset';
+        //anchor.navigation_mover.right = '-250px';
+        anchor.navigation_mover.transform = 'unset';
         anchor.slide_flag = false;
        }
     },/*slide_nav*/
@@ -34,19 +39,23 @@ var Mixin = {
 
       if (Mixin.data.slide_flag === true){
         anchor.slide_mover.left = '0';
-        anchor.navigation_mover.right = '-250px';
+        //anchor.slide_mover.transform = 'unset';
+        //anchor.navigation_mover.right = '-250px';
+        anchor.navigation_mover.transform = 'unset';
         anchor.slide_flag = false;
       }
     },
     /*Set timeout Navigation close for click menus*/
     make_slow() {
       setTimeout(function(){
-        console.log("im in!")
+        console.log("im in!");
         var anchor = Mixin.data;
 
         if (Mixin.data.slide_flag === true){
           anchor.slide_mover.left = '0';
-          anchor.navigation_mover.right = '-250px';
+          //anchor.slide_mover.transform = 'unset';
+          //anchor.navigation_mover.right = '-250px';
+          anchor.navigation_mover.transform = 'unset';
           anchor.slide_flag = false;
         }
       }, 250)

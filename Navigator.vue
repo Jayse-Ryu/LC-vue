@@ -3,9 +3,11 @@
   <nav class="navigation_wrap" id="navigation_wrap"
        :style="this.$parent.$data.mix_data.navigation_mover" >
 
-    <div class="menu_close" id="menu_close" @click="$parent.$options.methods.only_close"></div>
+    <!-- X close button -->
+    <div class="menu_close" id="menu_close"
+         @click="$parent.$options.methods.only_close"></div>
 
-    <!-- Nav Category 1 -->
+    <!-- Nav Category 1 About Company -->
     <ul class="nav_category" @click="$parent.$options.methods.navi_delay">
       <li>
         <router-link class="nav_a" to="/">홈</router-link>
@@ -23,7 +25,7 @@
 
     <div class="menu_division"></div>
 
-    <!-- Nav Category 2 -->
+    <!-- Nav Category 2 About us -->
     <ul class="nav_category" @click="$parent.$options.methods.navi_delay">
       <li>
         <router-link class="nav_a" to="/people">엘씨 크루</router-link>
@@ -35,7 +37,7 @@
 
     <div class="menu_division"></div>
 
-    <!-- Nav Category 3 -->
+    <!-- Nav Category 3 Others -->
     <ul class="nav_category" @click="$parent.$options.methods.navi_delay">
       <li>
         <router-link class="nav_a" to="/contact">연락처</router-link>
@@ -58,7 +60,7 @@
 </script>
 
 <style lang="scss" scoped>
-  /* Hidden Navigation CSS */
+  /* Right Navigation CSS */
   .navigation_wrap {
     position: fixed;
     width: 250px;
@@ -74,21 +76,6 @@
     box-shadow: inset 25px 0px 20px -20px rgba(0,0,0,0.5);
   }
 
-  .navigation_wrap_slide {
-    position: fixed;
-    width: 250px;
-    height: 100vh;
-    background-color: #121212;
-    top: 0;
-    right: 0;
-    text-align: center;
-    transition: all 350ms cubic-bezier(.83,.01,.46,.86);
-    padding: 25px 0;
-    overflow-x: hidden;
-    overflow-y: auto;
-    box-shadow: inset 25px 0px 20px -20px rgba(0,0,0,0.5);
-  }
-
   .nav_category {
     width: 90%;
     margin: 20px auto 20px auto;
@@ -96,33 +83,29 @@
     font-size: 18px;
     line-height: 25px;
     li {
-      transition: all 350ms cubic-bezier(.83,.01,.46,.86);
+      //transition: all 350ms cubic-bezier(.83,.01,.46,.86);
       margin: 8px 0;
-      a {
+      .nav_a {
         display: block;
         padding: 0 8px;
         color: #efefef;
-      //transition: all 350ms cubic-bezier(.83,.01,.46,.86);
         &:hover {
-           color: yellow;
+           color: #fff68f;
          }
-      }
+      }/*List route links*/
     &:hover {
        cursor: pointer;
        background-color: #313131;
      }
-    }
-  }
-  .selected {
-    color: yellow !important;
-  }
+    }/*Nav Lists*/
+  }/*Nav category*/
 
   .menu_division {
     width: 25px;
     height: 1px;
     background-color: #c1c1c1;
     margin: 0 20px;
-  }
+  }/* Divide bar */
 
   .menu_close {
     position: fixed;
@@ -147,8 +130,7 @@
     &:hover:before {
        color: #efefef;
      }
-  }
-
+  }/*menu close*/
   /* Hidden Navigation Ended */
 
 </style>

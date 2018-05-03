@@ -9,6 +9,7 @@
           <p>수많은 경험과 노력으로 만들어진다.</p>
         </div>
       </section>
+      <!--section 0-->
 
       <section class="section_1">
         <p>엘씨 벤처스는</p>
@@ -19,6 +20,7 @@
         <p>사람의 감성을 닮은 디자인에 디지털 기술을 더함으로써</p>
         <p>고객의 비즈니스에 필요한 아름답고도 유용한 최신의 크리에이티브 솔루션을 한발 앞서 제공합니다.</p>
       </section>
+      <!--section 1-->
 
       <section class="section_2">
         <div>
@@ -114,9 +116,10 @@
                 </ul>
               </li>
             </ul>
-          </div>
-        </div>
+          </div><!--what we doing wrap-->
+        </div><!--bind all in section-->
       </section>
+      <!--section 2-->
 
       <section class="section_3">
         <div class="section_3_boxes">
@@ -130,7 +133,7 @@
             </div>
           </div>
           <div class="meet_box_2">
-            <h3>엘씨벤처스 사무실</h3>
+            <h3>엘씨 사무실</h3>
             <h4>사무실을 소개합니다.</h4>
             <p>멋진 카페들이 많은 서울숲에 있는 엘씨벤처스는</p>
             <p>자유롭고 크리에이티브한 공간입니다.</p>
@@ -138,11 +141,12 @@
               <router-link class="router" to="/contact">더 알아보기 &#62</router-link>
             </div>
           </div>
-        </div>
+        </div><!--boxes-->
       </section>
+      <!--section 3-->
 
-    </div>
-  </div>
+    </div><!--Main-->
+  </div><!--Main role-->
 </template>
 
 <script>
@@ -168,7 +172,7 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: 50% 50%;
-  }
+  }/*main pictures*/
 
   /* section 0 start */
   .section_0 {
@@ -179,7 +183,7 @@
     width: 100%;
     height: 100vh;
     padding-top: calc(50vh - 25px);
-    color: yellow;
+    color: #fff68f;
     text-align: center;
     font-size: 50px;
     font-weight: lighter;
@@ -194,6 +198,7 @@
     width: 100%;
     top: 0;
     left: 0;
+    transform: unset;
   }
 
   @media (max-width: 1200px) {
@@ -205,7 +210,7 @@
       width: 100%;
       height: 100vh;
       padding-top: calc(50vh - 25px);
-      color: yellow;
+      color: #fff68f;
       text-align: center;
       font-size: 28px;
       word-break: keep-all;
@@ -227,7 +232,7 @@
   /* section 2 start */
   .section_2 {
     .section_2_title {
-      color: yellow;
+      color: #fff68f;
     }
     .section_2_describe {
       font-size: 25px;
@@ -253,7 +258,7 @@
         .doing_list_title{
           font-size: 22px;
           padding: 10px 0;
-          color: yellow;
+          color: #fff68f;
         }
         .doing_ul {
           padding: 15px 22px;
@@ -274,8 +279,10 @@
     .section_3_boxes {
       position: relative;
       text-align: center;
+      background-color: #1c3448;
       .meet_box_1 {
         width: 50%;
+        min-height: 255px;
         vertical-align: top;
         float: left;
         padding: 40px 20px;
@@ -284,6 +291,7 @@
       }
       .meet_box_2 {
         width: 50%;
+        min-height: 255px;
         vertical-align: top;
         float: left;
         padding: 40px 20px;
@@ -309,11 +317,11 @@
         font-size: 14px;
       }
       .router {
-        color: yellow;
+        color: #fff68f;
         &:hover {
           color: #efefef;
         }
       }
     }
-  }
+  } /*section 3 ended*/
 </style>
