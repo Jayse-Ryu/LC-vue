@@ -9,7 +9,6 @@ var Mixin = {
       left: '0',
     },
     navigation_mover: {
-      //right: '-250px',
       transform: 'unset'
     }
   }/*data*/,
@@ -20,15 +19,11 @@ var Mixin = {
 
       if(Mixin.data.slide_flag === false){
         anchor.slide_mover.left = '-250px';
-        //anchor.slide_mover.transform = 'translateX(-250px)';
-        //anchor.navigation_mover.right = '0';
         anchor.navigation_mover.transform = 'translateX(-250px)';
         anchor.slide_flag = true;
       }
        else if (Mixin.data.slide_flag === true){
         anchor.slide_mover.left = '0';
-        //anchor.slide_mover.transform = 'unset';
-        //anchor.navigation_mover.right = '-250px';
         anchor.navigation_mover.transform = 'unset';
         anchor.slide_flag = false;
        }
@@ -39,8 +34,6 @@ var Mixin = {
 
       if (Mixin.data.slide_flag === true){
         anchor.slide_mover.left = '0';
-        //anchor.slide_mover.transform = 'unset';
-        //anchor.navigation_mover.right = '-250px';
         anchor.navigation_mover.transform = 'unset';
         anchor.slide_flag = false;
       }
@@ -48,13 +41,10 @@ var Mixin = {
     /*Set timeout Navigation close for click menus*/
     make_slow() {
       setTimeout(function(){
-        console.log("im in!");
         var anchor = Mixin.data;
 
         if (Mixin.data.slide_flag === true){
           anchor.slide_mover.left = '0';
-          //anchor.slide_mover.transform = 'unset';
-          //anchor.navigation_mover.right = '-250px';
           anchor.navigation_mover.transform = 'unset';
           anchor.slide_flag = false;
         }

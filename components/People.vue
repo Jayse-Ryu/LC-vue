@@ -3,6 +3,8 @@
        :style="this.$parent.$data.mix_data.slide_mover"
        @click="$parent.$options.methods.only_close">
 
+    <img class="main_image" src="../assets/pages/people/people.jpg" alt="page background image">
+
     <section class="section_0">
       <h3>좋은 마케팅, 더 좋은 사람들</h3>
     </section>

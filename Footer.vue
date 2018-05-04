@@ -1,6 +1,7 @@
 <template>
   <footer class="footer"
-          :style="this.$parent.$data.mix_data.slide_mover">
+          :style="this.$parent.$data.mix_data.slide_mover"
+          @click="$parent.$options.methods.only_close">
     <div class="footer_wrap"><!--for make without padding-->
         <h6 class="footer_title">LC Ventures</h6>
         <div class="about_us">
@@ -38,6 +39,7 @@
     padding: 50px 20px;
     background-color: #fff68f;
     transition: all 350ms cubic-bezier(.83,.01,.46,.86);
+    box-shadow: inset 0 200px 20px -190px rgba(0,0,0,0.75);
     .footer_wrap {
       /* Real footer contents in here */
       .footer_title {

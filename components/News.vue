@@ -3,6 +3,8 @@
        :style="this.$parent.$data.mix_data.slide_mover"
        @click="$parent.$options.methods.only_close">
 
+    <img class="main_image" src="../assets/pages/news/news.jpg" alt="page background image">
+
     <section class="section_0">
       <h2>엘씨벤처스의 도약은 현재진행형 입니다.</h2>
     </section>

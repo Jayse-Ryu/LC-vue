@@ -85,7 +85,7 @@
     width: 100%;
     height: 100%;
     z-index: 30;
-    background-image: url("../assets/unsplash2.jpg");
+    background-image: url("../assets/pages/home/unsplash2.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;

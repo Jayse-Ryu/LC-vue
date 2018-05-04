@@ -2,6 +2,9 @@
   <div class="main_role" id="main_role"
        :style="this.$parent.$data.mix_data.slide_mover"
        @click="$parent.$options.methods.only_close">
+
+    <img class="main_image" src="../assets/pages/projects/project.jpg" alt="page background image">
+
     <section class="section_0">
       <h2 class="section_0_title">
         <p>오늘 우리의 크리에이티브는</p>
@@ -16,25 +19,46 @@
     <section class="section_2">
       <div class="projects">
         <ul>
+
           <li>
-            <p>1</p>
+            <div class="career_wrap">
+              <img class="career_image" src="../assets/pages/projects/temporary-0.png" alt="Our project - temp 1">
+            </div>
+            <div class="career_inform">
+              <p>Green box</p>
+            </div>
           </li>
+
           <li>
-            <p>2</p>
+            <div class="career_wrap">
+              <img class="career_image" src="../assets/pages/projects/temporary-1.png" alt="Our project - temp 1">
+            </div>
+            <div class="career_inform">
+              <p>White box</p>
+            </div>
           </li>
+
           <li>
-            <p>3</p>
+            <div class="career_wrap">
+              <img class="career_image" src="../assets/pages/projects/temporary-2.png" alt="Our project - temp 1">
+            </div>
+            <div class="career_inform">
+              <p>Blue box</p>
+            </div>
           </li>
+
           <li>
-            <p>4</p>
+            <div class="career_wrap">
+              <img class="career_image" src="../assets/pages/projects/temporary-0.png" alt="Our project - temp 1">
+            </div>
+            <div class="career_inform">
+              <p>Green box</p>
+            </div>
           </li>
-          <li>
-            <p>5</p>
-          </li>
+
         </ul>
       </div>
     </section>
-
   </div>
 </template>
 
@@ -45,22 +69,9 @@
 </script>
 
 <style lang="scss" scoped>
+
   .section_0 {
-    position: relative;
-    top: 0;
-    left: 0;
-    z-index: 450;
-    width: 100%;
-    height: 100vh;
-    padding-top: calc(50vh - 25px);
-    color: #fff68f;
-    text-align: center;
-    font-size: 20px;
-    font-weight: lighter;
-    word-break: keep-all;
-    white-space: pre-line;
-    background-color: #0860a8;
-    box-shadow: inset 0px -200px 20px -190px rgba(0,0,0,0.75);
+    font-size: 40px;
   }
 
   .section_0_title {
@@ -84,8 +95,27 @@
 
   .projects {
     ul {
+      position: relative;
+      margin: 0 auto;
+      padding: 2px 0;
+      background-color: #fff68f;
       li {
-        height: 100px;
+        position: relative;
+        background-color: darkgreen;
+        max-height: 400px;
+        overflow: hidden;
+        .career_wrap {
+          .career_image {
+            position: relative;
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+          }
+        }
+        .career_inform {
+          position: relative;
+          color: #fff68f;
+        }
       }/*projects ul li*/
     }/*projects ul*/
   }/*projects*/

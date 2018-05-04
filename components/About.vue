@@ -2,7 +2,9 @@
   <div class="main_role" id="main_role"
        :style="this.$parent.$data.mix_data.slide_mover"
        @click="$parent.$options.methods.only_close">
-    <div class="main">
+
+    <img class="main_image" src="../assets/pages/about/about_low.jpg" alt="page background image">
+
       <section class="section_0">
         <div class="section_0_content_1">
           <p>디지털 미디어 광고 퍼포먼스를 이끌어가는 능력은</p>
@@ -145,7 +147,6 @@
       </section>
       <!--section 3-->
 
-    </div><!--Main-->
   </div><!--Main role-->
 </template>
 
@@ -156,41 +157,10 @@
 </script>
 
 <style lang="scss" scoped>
-  /*
-  ===============================================
-    Page 1
-  ===============================================
-  */
-
-  .main {
-    position: relative;
-    top: 0;
-    left: 0;
-    z-index: 400;
-    background-image: url('../assets/unsplash1_low.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: 50% 50%;
-  }/*main pictures*/
 
   /* section 0 start */
   .section_0 {
-    position: relative;
-    top: 0;
-    left: 0;
-    z-index: 450;
-    width: 100%;
-    height: 100vh;
-    padding-top: calc(50vh - 25px);
-    color: #fff68f;
-    text-align: center;
     font-size: 50px;
-    font-weight: lighter;
-    word-break: keep-all;
-    white-space: pre-line;
-    background-color: rgba(0,0,0,0.5);
-    box-shadow: inset 0px -200px 20px -190px rgba(0,0,0,0.75);
   }
 
   .section_0_content_1 {
@@ -201,7 +171,7 @@
     transform: unset;
   }
 
-  @media (max-width: 1200px) {
+  @media (max-width: 1100px) {
     .section_0 {
       position: relative;
       top: 0;
@@ -218,6 +188,7 @@
     }
   }/*=*/
   /* section 0 end */
+
 
   /* section 1 start */
   .section_1 {
@@ -324,4 +295,25 @@
       }
     }
   } /*section 3 ended*/
+
+  @media (max-width: 725px) {
+    .meet_box_1 {
+      width: 100%;
+      min-height: 255px;
+      vertical-align: top;
+      //float: left;
+      padding: 40px 20px;
+      background-color: #1c3448;
+      color: #efefef;
+    }
+    .meet_box_2 {
+      width: 100%;
+      min-height: 255px;
+      vertical-align: top;
+      //float: left;
+      padding: 40px 20px;
+      background-color: #2a4e6c;
+      color: #efefef;
+    }
+  }
 </style>

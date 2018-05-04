@@ -5,7 +5,9 @@
 
     <!-- X close button -->
     <div class="menu_close" id="menu_close"
-         @click="$parent.$options.methods.only_close"></div>
+         @click="$parent.$options.methods.only_close">
+      <img class="menu_close_image" src="./assets/common/close_btn.png" alt="close button">
+    </div>
 
     <!-- Nav Category 1 About Company -->
     <ul class="nav_category" @click="$parent.$options.methods.navi_delay">
@@ -83,7 +85,6 @@
     font-size: 18px;
     line-height: 25px;
     li {
-      //transition: all 350ms cubic-bezier(.83,.01,.46,.86);
       margin: 8px 0;
       .nav_a {
         display: block;
@@ -117,11 +118,6 @@
     border-radius: 100px;
     cursor: pointer;
     float: right;
-    background-image: url("./assets/close_btn.png");
-    background-position: 50% 50%;
-    background-size: 20px;
-    background-repeat: no-repeat;
-    filter: invert(80%);
     margin: -15px 15px 0 0;
     transition: all 350ms cubic-bezier(.83,.01,.46,.86);
     &:hover {
@@ -130,6 +126,12 @@
     &:hover:before {
        color: #efefef;
      }
+    .menu_close_image {
+      width: 100%;
+      height: 100%;
+      transform: scale(0.6);
+      filter: invert(80%);
+    }
   }/*menu close*/
   /* Hidden Navigation Ended */
 

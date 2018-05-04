@@ -3,6 +3,8 @@
        :style="this.$parent.$data.mix_data.slide_mover"
        @click="$parent.$options.methods.only_close">
 
+    <img class="main_image" src="../assets/pages/recruit/recruit.jpg" alt="page background image">
+
     <section class="section_0">
       <h3>엘씨벤처스에 지원해주세요.</h3>
     </section>
