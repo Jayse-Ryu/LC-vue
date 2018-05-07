@@ -23,36 +23,36 @@
           <li>
             <div class="career_wrap">
               <img class="career_image" src="../assets/pages/projects/temporary-0.png" alt="Our project - temp 1">
-            </div>
-            <div class="career_inform">
-              <p>Green box</p>
+              <div class="career_inform">
+                <p>Green box</p>
+              </div>
             </div>
           </li>
 
           <li>
             <div class="career_wrap">
               <img class="career_image" src="../assets/pages/projects/temporary-1.png" alt="Our project - temp 1">
-            </div>
-            <div class="career_inform">
-              <p>White box</p>
+              <div class="career_inform">
+                <p>White box</p>
+              </div>
             </div>
           </li>
 
           <li>
             <div class="career_wrap">
               <img class="career_image" src="../assets/pages/projects/temporary-2.png" alt="Our project - temp 1">
-            </div>
-            <div class="career_inform">
-              <p>Blue box</p>
+              <div class="career_inform">
+                <p>Blue box</p>
+              </div>
             </div>
           </li>
 
           <li>
             <div class="career_wrap">
               <img class="career_image" src="../assets/pages/projects/temporary-0.png" alt="Our project - temp 1">
-            </div>
-            <div class="career_inform">
-              <p>Green box</p>
+              <div class="career_inform">
+                <p>Green box</p>
+              </div>
             </div>
           </li>
 
@@ -97,26 +97,29 @@
     ul {
       position: relative;
       margin: 0 auto;
-      padding: 2px 0;
       background-color: #fff68f;
       li {
-        position: relative;
-        background-color: darkgreen;
-        max-height: 400px;
+        width: 100%;
         overflow: hidden;
         .career_wrap {
+          max-height: 300px;
           .career_image {
-            position: relative;
             width: 100%;
-            max-height: 400px;
+            max-height: 300px;
+            float: left;
             object-fit: cover;
           }
-        }
-        .career_inform {
-          position: relative;
-          color: #fff68f;
+          .career_inform {
+            position: relative;
+            padding: 15px;
+            top: calc(50% + 15px);
+            left: 50%;
+            transform: translate(-50% -50%);
+            color: #1ff68f;
+          }
         }
       }/*projects ul li*/
     }/*projects ul*/
   }/*projects*/
+
 </style>
