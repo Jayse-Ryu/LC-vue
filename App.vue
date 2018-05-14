@@ -1,13 +1,18 @@
 <template>
   <div id="app">
+
     <!--Header-->
     <app-header/>
+
     <!--Main Contents-->
     <router-view/>
+
     <!--Footer-->
     <app-footer/>
+
     <!--Right side Navigation-->
     <app-navigator/>
+
   </div>
 </template>
 
@@ -520,7 +525,7 @@ export default {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
-  } /*body normalize more*/
+  } /* body normalize more */
 
   .main_role {
     position: relative;
@@ -529,7 +534,7 @@ export default {
     width: 100%;
     min-height: 100vh;
     transition: all 350ms cubic-bezier(.83,.01,.46,.86);
-  } /*Overall Main Contents Area*/
+  } /* Overall Main Contents Area */
 
   .main_image {
     position: fixed;
@@ -539,7 +544,7 @@ export default {
     height: 100vh;
     z-index: -100;
     object-fit: cover;
-  }
+  } /* Main Background images */
 
   .section_0 {
     position: relative;
@@ -551,12 +556,25 @@ export default {
     padding-top: calc(50vh - 25px);
     color: #fff68f;
     text-align: center;
-    font-weight: lighter;
+    font-size: 30px;
     word-break: keep-all;
     white-space: pre-line;
     background-color: rgba(0,0,0,0.5);
     box-shadow: inset 0px -200px 20px -190px rgba(0,0,0,0.75);
     overflow: hidden;
-  }
+  } /* Main image section belongs to App.vue */
+
+  .section_0_title {
+    padding: 0;
+    margin: 0;
+  } /* Main image sections' innerText belongs to App.vue */
+
+  @media (max-width: 1100px) {
+    .section_0_title {
+      font-size: 28px;
+      font-weight: lighter;
+    } /* For Small size viewer */
+  }/*=*/
+
 
 </style>

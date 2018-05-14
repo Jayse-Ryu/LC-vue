@@ -6,10 +6,10 @@
     <img class="main_image" src="../assets/pages/about/about_low.jpg" alt="page background image">
 
       <section class="section_0">
-        <div class="section_0_content_1">
+        <h2 class="section_0_title">
           <p>디지털 미디어 광고 퍼포먼스를 이끌어가는 능력은</p>
           <p>수많은 경험과 노력으로 만들어진다.</p>
-        </div>
+        </h2>
       </section>
       <!--section 0-->
 
@@ -126,19 +126,23 @@
       <section class="section_3">
         <div class="section_3_boxes">
           <div class="meet_box_1">
-            <h3>엘씨 사람들</h3>
-            <h4>팀을 만나보세요.</h4>
-            <p>기획, 디자이너, 개발자 등 각 분야에서</p>
-            <p>탁월한 엘씨벤처스의 팀을 소개합니다.</p>
+            <h3 class="box_title">엘씨 사람들</h3>
+            <h4 class="box_describe">팀을 만나보세요.</h4>
+            <div class="box_contents">
+              <p>기획, 디자이너, 개발자 등 각 분야에서</p>
+              <p>탁월한 엘씨벤처스의 팀을 소개합니다.</p>
+            </div>
             <div class="router_wrap">
               <router-link class="router" to="/people">더 알아보기 &#62</router-link>
             </div>
           </div>
           <div class="meet_box_2">
-            <h3>엘씨 사무실</h3>
-            <h4>사무실을 소개합니다.</h4>
-            <p>멋진 카페들이 많은 서울숲에 있는 엘씨벤처스는</p>
-            <p>자유롭고 크리에이티브한 공간입니다.</p>
+            <h3 class="box_title">엘씨 사무실</h3>
+            <h4 class="box_describe">사무실을 소개합니다.</h4>
+            <div class="box_contents">
+              <p>멋진 카페들이 많은 서울숲에 있는 엘씨벤처스는</p>
+              <p>자유롭고 크리에이티브한 공간입니다.</p>
+            </div>
             <div class="router_wrap">
               <router-link class="router" to="/contact">더 알아보기 &#62</router-link>
             </div>
@@ -152,43 +156,11 @@
 
 <script>
   export default {
-      name: "about",
+    name: "about"
   }
 </script>
 
 <style lang="scss" scoped>
-
-  /* section 0 start */
-  .section_0 {
-    font-size: 50px;
-  }
-
-  .section_0_content_1 {
-    position: relative;
-    width: 100%;
-    top: 0;
-    left: 0;
-    transform: unset;
-  }
-
-  @media (max-width: 1100px) {
-    .section_0 {
-      position: relative;
-      top: 0;
-      left: 0;
-      z-index: 400;
-      width: 100%;
-      height: 100vh;
-      padding-top: calc(50vh - 25px);
-      color: #fff68f;
-      text-align: center;
-      font-size: 28px;
-      word-break: keep-all;
-      white-space: pre-line;
-    }
-  }/*=*/
-  /* section 0 end */
-
 
   /* section 1 start */
   .section_1 {
@@ -251,34 +223,17 @@
       position: relative;
       text-align: center;
       background-color: #1c3448;
-      .meet_box_1 {
-        width: 50%;
-        min-height: 255px;
-        vertical-align: top;
-        float: left;
-        padding: 40px 20px;
-        background-color: #1c3448;
-        color: #efefef;
-      }
-      .meet_box_2 {
-        width: 50%;
-        min-height: 255px;
-        vertical-align: top;
-        float: left;
-        padding: 40px 20px;
-        background-color: #2a4e6c;
-        color: #efefef;
-      }
+      //meet boxes(float left) in it.
       &:after {
         content: '';
         display: block;
         clear: both;
       }
-      h3 {
+      .box_title {
         margin: 0;
         font-size: 15px;
       }
-      h4 {
+      .box_describe {
         font-size: 25px;
         margin: 0;
         padding: 20px 0;
@@ -291,17 +246,35 @@
         color: #fff68f;
         &:hover {
           color: #efefef;
-        }
-      }
-    }
-  } /*section 3 ended*/
+        }/* Router hover */
+      }/* Router */
+    }/* Section 3 boxes */
+  }/* Section 3 ended */
+
+  .meet_box_1 {
+    width: 50%;
+    min-height: 255px;
+    vertical-align: top;
+    float: left;
+    padding: 40px 20px;
+    background-color: #1c3448;
+    color: #efefef;
+  }
+  .meet_box_2 {
+    width: 50%;
+    min-height: 255px;
+    vertical-align: top;
+    float: left;
+    padding: 40px 20px;
+    background-color: #2a4e6c;
+    color: #efefef;
+  }
 
   @media (max-width: 725px) {
     .meet_box_1 {
       width: 100%;
       min-height: 255px;
       vertical-align: top;
-      //float: left;
       padding: 40px 20px;
       background-color: #1c3448;
       color: #efefef;
@@ -310,7 +283,6 @@
       width: 100%;
       min-height: 255px;
       vertical-align: top;
-      //float: left;
       padding: 40px 20px;
       background-color: #2a4e6c;
       color: #efefef;

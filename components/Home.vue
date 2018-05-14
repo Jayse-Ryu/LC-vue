@@ -4,6 +4,8 @@
         :style="this.$parent.$data.mix_data.slide_mover"
         @click="$parent.$options.methods.only_close">
 
+    <input type="hidden" v-bind:value="where_am_i = 0">
+
     <div class="video_wrap" id="video_wrap">
       <div class="video_basket" id="video_basket">
 
@@ -34,7 +36,7 @@
 
 <script>
     export default {
-      name: "home",
+      name: "home"
     }
 </script>
 
@@ -160,7 +162,6 @@
     .video_cover {
       visibility: visible;
     }
-
   }/*=*/
 
 </style>

@@ -3,10 +3,14 @@
        :style="this.$parent.$data.mix_data.slide_mover"
        @click="$parent.$options.methods.only_close">
 
+    <input type="hidden" v-bind:value="where_am_i = 6">
+
     <img class="main_image" src="../assets/pages/contact/contact.jpg" alt="page background image">
 
     <section class="section_0">
-      <h3>엘씨벤처스는 가까이에 있습니다.</h3>
+      <h2 class="section_0_title">
+        <p>엘씨벤처스는 가까이에 있습니다.</p>
+      </h2>
     </section>
 
   </div>
@@ -14,26 +18,10 @@
 
 <script>
     export default {
-        name: "contact",
+        name: "contact"
     }
 </script>
 
 <style lang="scss" scoped>
-  .section_0 {
-    position: relative;
-    top: 0;
-    left: 0;
-    z-index: 450;
-    width: 100%;
-    height: 100vh;
-    padding-top: calc(50vh - 25px);
-    color: #fff68f;
-    text-align: center;
-    font-size: 20px;
-    font-weight: lighter;
-    word-break: keep-all;
-    white-space: pre-line;
-    background-color: rgba(0,0,0,0.5);
-    box-shadow: inset 0px -200px 20px -190px rgba(0,0,0,0.75);
-  }
+
 </style>

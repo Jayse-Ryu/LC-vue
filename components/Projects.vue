@@ -3,6 +3,8 @@
        :style="this.$parent.$data.mix_data.slide_mover"
        @click="$parent.$options.methods.only_close">
 
+    <input type="hidden" v-bind:value="where_am_i = 2">
+
     <img class="main_image" src="../assets/pages/projects/project.jpg" alt="page background image">
 
     <section class="section_0">
@@ -64,20 +66,11 @@
 
 <script>
     export default {
-        name: "projects",
+        name: "projects"
     }
 </script>
 
 <style lang="scss" scoped>
-
-  .section_0 {
-    font-size: 40px;
-  }
-
-  .section_0_title {
-    padding: 0;
-    margin: 0;
-  }
 
   .section_1 {
     background-color: #fff68f;

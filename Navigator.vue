@@ -6,7 +6,7 @@
     <!-- X close button -->
     <div class="menu_close" id="menu_close"
          @click="$parent.$options.methods.only_close">
-      <img class="menu_close_image" src="./assets/common/close_btn.png" alt="close button">
+      <img class="menu_close_image" src="./assets/common/close_btn.png" alt="Navigation close button">
     </div>
 
     <!-- Nav Category 1 About Company -->
@@ -57,7 +57,7 @@
 
 <script>
   export default {
-    name: "app-navigator",
+    name: "app-navigator"
   }
 </script>
 
@@ -85,10 +85,10 @@
     font-size: 18px;
     line-height: 25px;
     li {
-      margin: 8px 0;
+      margin: 0 0;
       .nav_a {
         display: block;
-        padding: 0 8px;
+        padding: 4px 8px;
         color: #efefef;
         &:hover {
            color: #fff68f;
@@ -98,7 +98,18 @@
        cursor: pointer;
        background-color: #313131;
      }
-    }/*Nav Lists*/
+    }/*Normal Nav Lists*/
+    li .router-link-exact-active {
+      margin: 0 0;
+      cursor: pointer;
+      background-color: #313131;
+      color: #fff68f;
+      .nav_a {
+        display: block;
+        padding: 4px 8px;
+        color: #fff68f;
+      }
+    }/* Where Am I? class */
   }/*Nav category*/
 
   .menu_division {
