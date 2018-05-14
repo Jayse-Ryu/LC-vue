@@ -4,8 +4,6 @@
         :style="this.$parent.$data.mix_data.slide_mover"
         @click="$parent.$options.methods.only_close">
 
-    <input type="hidden" v-bind:value="where_am_i = 0">
-
     <div class="video_wrap" id="video_wrap">
       <div class="video_basket" id="video_basket">
 
@@ -16,12 +14,13 @@
         </iframe>
         -->
 
-        <iframe class="video" id="video"
+        <iframe v-if="windowWidth > 750" class="video" id="video"
                 src="https://player.vimeo.com/video/221257502?autoplay=1&loop=1&color=ffffff&background=1&title=0&byline=0&portrait=0&controls=0"
                 width="100%" height="100%" frameborder="0" volume="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
         </iframe>
 
-        <div class="video_cover"></div>
+        <img v-else class="video_cover" src="../assets/pages/home/unsplash2.jpg" alt="Main Cover Image" />
+
       </div>
     </div>
 
@@ -36,7 +35,20 @@
 
 <script>
     export default {
-      name: "home"
+      name: "home",
+      data: function() {
+        return {
+          windowWidth: window.innerWidth
+        }
+      },
+      mounted() {
+        let that = this;
+        this.$nextTick(function() {
+          window.addEventListener('resize', function(e) {
+            that.windowWidth = window.innerWidth
+          });
+        })
+      }
     }
 </script>
 
@@ -87,12 +99,7 @@
     width: 100%;
     height: 100%;
     z-index: 30;
-    background-image: url("../assets/pages/home/unsplash2.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: 50% 50%;
-    visibility: hidden;
+    object-fit: cover;
   }
 
   /* Stretch Video */
@@ -149,18 +156,6 @@
       word-break: keep-all;
       white-space: pre-line;
       overflow: hidden;
-    }
-
-  }/*=*/
-
-  @media (max-width: 750px) {
-
-    .video {
-      visibility: hidden;
-    }
-
-    .video_cover {
-      visibility: visible;
     }
   }/*=*/
 
